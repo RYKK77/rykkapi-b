@@ -1,0 +1,2 @@
+# SDK starter
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.rykk.rykapiclientsdk.RykapiClientConfig
