@@ -22,6 +22,8 @@ public class RykApiClient {
 
     private String secretKey;
 
+    private static final String GATEWAY_HOST = "http://127.0.0.1:8090";
+
     public RykApiClient(String accessKey, String secretKey) {
         this.accessKey = accessKey;
         this.secretKey = secretKey;
@@ -32,7 +34,7 @@ public class RykApiClient {
         HashMap<String, Object> paramMap = new HashMap<>();
         paramMap.put("name", name);
 
-        String result= HttpUtil.get("http://127.0.0.1:5411/api/basic/", paramMap);
+        String result = HttpUtil.get(GATEWAY_HOST + "/api/basic/", paramMap);
         System.out.println(result);
         return result;
     }
@@ -41,7 +43,7 @@ public class RykApiClient {
         HashMap<String, Object> paramMap = new HashMap<>();
         paramMap.put("name", name);
 
-        String result= HttpUtil.post("http://127.0.0.1:5411/api/basic/name", paramMap);
+        String result = HttpUtil.post(GATEWAY_HOST + "api/basic/name", paramMap);
         System.out.println(result);
         return result;
     }
@@ -49,7 +51,7 @@ public class RykApiClient {
     public String getUserNameByPost(User user) {
         String json = JSONUtil.toJsonStr(user);
 
-        HttpResponse httpResponse = HttpRequest.post("http://127.0.0.1:5411/api/basic/user")
+        HttpResponse httpResponse = HttpRequest.post(GATEWAY_HOST + "/api/basic/user")
                 .addHeaders(getHeaderMap(json))
                 .body(json)
                 .execute();

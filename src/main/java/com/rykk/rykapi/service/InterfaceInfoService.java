@@ -2,7 +2,6 @@ package com.rykk.rykapi.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.rykk.rykapi.model.entity.InterfaceInfo;
-import com.rykk.rykapi.model.entity.InterfaceInfo;
 
 /**
 * @author Tyrrell
@@ -18,4 +17,5 @@ public interface InterfaceInfoService extends IService<InterfaceInfo> {
      * @param add
      */
     void validInterfaceInfo(InterfaceInfo interfaceInfo, boolean add);
+
 }

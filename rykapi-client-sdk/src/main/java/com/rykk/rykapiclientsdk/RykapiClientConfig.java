@@ -8,15 +8,18 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+
 @Configuration
 @ConfigurationProperties("rykk.client")
 @Data
+//能够扫描到包
 @ComponentScan
 public class RykapiClientConfig {
 
     private String accessKey;
 
     private String secretKey;
+
 
     @Bean
     public RykApiClient rykApiClient() {
