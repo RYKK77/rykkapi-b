@@ -6,9 +6,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.rykk.rykapi.common.ErrorCode;
 import com.rykk.rykapi.exception.BusinessException;
 import com.rykk.rykapi.exception.ThrowUtils;
-import com.rykk.rykapi.model.entity.UserInterfaceInfo;
 import com.rykk.rykapi.service.UserInterfaceInfoService;
 import com.rykk.rykapi.mapper.UserInterfaceInfoMapper;
+import com.rykk.rykapicommon.model.entity.UserInterfaceInfo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

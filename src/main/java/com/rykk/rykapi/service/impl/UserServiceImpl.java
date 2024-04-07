@@ -11,7 +11,6 @@ import com.rykk.rykapi.constant.CommonConstant;
 import com.rykk.rykapi.exception.BusinessException;
 import com.rykk.rykapi.mapper.UserMapper;
 import com.rykk.rykapi.model.dto.user.UserQueryRequest;
-import com.rykk.rykapi.model.entity.User;
 import com.rykk.rykapi.model.enums.UserRoleEnum;
 import com.rykk.rykapi.model.vo.LoginUserVO;
 import com.rykk.rykapi.model.vo.UserVO;
@@ -22,6 +21,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletRequest;
+
+import com.rykk.rykapicommon.model.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;

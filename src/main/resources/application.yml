@@ -1,6 +1,6 @@
 # 公共配置文件
 # @author rykk
-# 
+#
 spring:
   application:
     name: rykkapi-b
@@ -44,6 +44,18 @@ server:
     session:
       cookie:
         max-age: 2592000
+
+dubbo:
+  application:
+    name: dubbo-springboot-demo-provider
+  protocol:
+    name: dubbo
+#    端口设置为-1表示随机端口
+    port: 22221
+  registry:
+    id: nacos-registry
+    address: nacos://192.168.88.1:8848
+
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: false

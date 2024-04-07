@@ -1,4 +1,4 @@
-package com.rykk.rykapi.model.entity;
+package com.rykk.rykapicommon.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;

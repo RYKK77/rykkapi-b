@@ -3,9 +3,10 @@ package com.rykk.rykapi.service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.rykk.rykapi.model.dto.user.UserQueryRequest;
-import com.rykk.rykapi.model.entity.User;
 import com.rykk.rykapi.model.vo.LoginUserVO;
 import com.rykk.rykapi.model.vo.UserVO;
+import com.rykk.rykapicommon.model.entity.User;
+
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 

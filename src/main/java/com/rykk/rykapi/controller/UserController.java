@@ -15,8 +15,6 @@ import com.rykk.rykapi.model.dto.user.UserQueryRequest;
 import com.rykk.rykapi.model.dto.user.UserRegisterRequest;
 import com.rykk.rykapi.model.dto.user.UserUpdateMyRequest;
 import com.rykk.rykapi.model.dto.user.UserUpdateRequest;
-import com.rykk.rykapi.model.entity.User;
-import com.rykk.rykapi.model.vo.LoginUserVO;
 import com.rykk.rykapi.model.vo.UserVO;
 import com.rykk.rykapi.service.UserService;
 
@@ -24,6 +22,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import com.rykk.rykapicommon.model.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;

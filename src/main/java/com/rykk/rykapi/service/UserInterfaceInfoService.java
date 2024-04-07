@@ -2,9 +2,7 @@ package com.rykk.rykapi.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.rykk.rykapi.model.entity.InterfaceInfo;
-import com.rykk.rykapi.model.entity.User;
-import com.rykk.rykapi.model.entity.UserInterfaceInfo;
+import com.rykk.rykapicommon.model.entity.UserInterfaceInfo;
 
 /**
 * @author Tyrrell

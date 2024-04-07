@@ -1,7 +1,8 @@
 package com.rykk.rykapi.mapper;
 
-import com.rykk.rykapi.model.entity.UserInterfaceInfo;
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.rykk.rykapicommon.model.entity.UserInterfaceInfo;
 
 /**
 * @author Tyrrell

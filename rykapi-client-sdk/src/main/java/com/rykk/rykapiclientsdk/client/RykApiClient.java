@@ -43,7 +43,7 @@ public class RykApiClient {
         HashMap<String, Object> paramMap = new HashMap<>();
         paramMap.put("name", name);
 
-        String result = HttpUtil.post(GATEWAY_HOST + "api/basic/name", paramMap);
+        String result = HttpUtil.post(GATEWAY_HOST + "/api/basic/name", paramMap);
         System.out.println(result);
         return result;
     }

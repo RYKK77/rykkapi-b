@@ -6,8 +6,8 @@ import com.rykk.rykapi.common.ErrorCode;
 import com.rykk.rykapi.exception.BusinessException;
 import com.rykk.rykapi.exception.ThrowUtils;
 import com.rykk.rykapi.mapper.InterfaceInfoMapper;
-import com.rykk.rykapi.model.entity.InterfaceInfo;
 import com.rykk.rykapi.service.InterfaceInfoService;
+import com.rykk.rykapicommon.model.entity.InterfaceInfo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 

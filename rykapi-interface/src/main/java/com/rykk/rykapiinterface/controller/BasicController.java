@@ -42,31 +42,6 @@ public class BasicController {
     }
     @PostMapping("/user")
     public String getUserNameByPost(@RequestBody User user, HttpServletRequest request) {
-        //从请求头中获取ak、sk(sk在签名中隐藏)
-        String accessKey = request.getHeader("accessKey");
-//        String secretKey = request.getHeader("secretKey");
-        String nonce = request.getHeader("nonce");
-        String timestamp = request.getHeader("timestamp");
-        String sign = request.getHeader("sign");
-        String body = request.getHeader("body");
-        //TODO 实际上这里的校验要从数据库中读取
-        if (!accessKey.equals("rykk")) {
-            throw new RuntimeException("没有权限");
-        }
-        //检验随机数范围，当然也可以周期性使用固定的单次随机数
-        if (Long.parseLong(nonce) > 10000) {
-            throw new RuntimeException("没有权限");
-        }
-        //TODO 检验时间是否在1分钟内
-//        if (timestamp...) {
-//
-//        }
-        // 校验签名
-        //TODO 这里的secretKey从数据库中获取
-        String severSign = SignUtils.genSign(body, "123456");
-        if (!severSign.equals(sign)) {
-            throw new RuntimeException("没有权限");
-        }
         return "POST(url) your user name:" + user.getName();
     }
 

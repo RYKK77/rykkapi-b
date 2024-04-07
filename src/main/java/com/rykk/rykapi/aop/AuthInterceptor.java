@@ -3,11 +3,12 @@ package com.rykk.rykapi.aop;
 import com.rykk.rykapi.annotation.AuthCheck;
 import com.rykk.rykapi.common.ErrorCode;
 import com.rykk.rykapi.exception.BusinessException;
-import com.rykk.rykapi.model.entity.User;
 import com.rykk.rykapi.model.enums.UserRoleEnum;
 import com.rykk.rykapi.service.UserService;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+
+import com.rykk.rykapicommon.model.entity.User;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;

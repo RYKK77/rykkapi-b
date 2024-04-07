@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rykk.rykapi.mapper.UserMapper">
 
-    <resultMap id="BaseResultMap" type="com.rykk.rykapi.model.entity.User">
+    <resultMap id="BaseResultMap" type="com.rykk.rykapicommon.model.entity.User">
             <id property="id" column="id" jdbcType="BIGINT"/>
             <result property="userName" column="userName" jdbcType="VARCHAR"/>
             <result property="userAccount" column="userAccount" jdbcType="VARCHAR"/>

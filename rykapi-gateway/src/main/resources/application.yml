@@ -1,0 +1,33 @@
+server:
+  port: 8090
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: api_route
+          uri: http://localhost:5411
+          predicates:
+            - Path=/api/**
+      default-filters:
+        - AddResponseHeader=source, rykk
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: trace
+  file:
+    name: D:\myProject\rykapi-gateway\Log\调用日志.log
+
+dubbo:
+  application:
+    name: dubbo-springboot-demo-provider
+    qosPort: 22223
+  protocol:
+    name: dubbo
+    #    端口设置为-1表示随机端口
+    port: 22224
+  registry:
+    id: nacos-registry
+    address: nacos://192.168.88.1:8848/
