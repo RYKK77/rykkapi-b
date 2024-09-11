@@ -1,6 +1,6 @@
 # Docker 镜像构建
 #
-FROM maven:3.8.8-jdk-8-slim as builder
+FROM maven:3.8.8-amazoncorretto-8 as builder
 
 # Copy local code to the container image.
 WORKDIR /app

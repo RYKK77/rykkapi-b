@@ -51,6 +51,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
     @DubboReference
     private InnerUserInterfaceInfoService innerUserInterfaceInfoService;
 
+    // 这个常量应该从数据库中读取，因为每个接口的Host不一定相同
     private static final String INTERFACE_HOST = "http://localhost:5411";
 
     /**
@@ -100,9 +101,6 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
         if (invokeUser == null) {
             return handleNoAuth(response);
         }
-//        if (!accessKey.equals("rykk")) {
-//            return handleNoAuth(response);
-//        }
         //检验随机数范围，当然也可以周期性使用固定的单次随机数
         if (Long.parseLong(nonce) > 10000) {
             return handleNoAuth(response);

@@ -4,6 +4,8 @@ package com.rykk.rykapi.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.rykk.rykapicommon.model.entity.UserInterfaceInfo;
 
+import java.util.List;
+
 /**
 * @author Tyrrell
 * @description 针对表【user_interface_info(用户)】的数据库操作Mapper
@@ -11,7 +13,7 @@ import com.rykk.rykapicommon.model.entity.UserInterfaceInfo;
 * @Entity com.rykk.rykapi.model.entity.UserInterfaceInfo
 */
 public interface UserInterfaceInfoMapper extends BaseMapper<UserInterfaceInfo> {
-
+    List<UserInterfaceInfo> listTopInvokeInterfaceInfo(int limit);
 }
 
 
